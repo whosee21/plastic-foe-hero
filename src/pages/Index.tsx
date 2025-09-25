@@ -1,13 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { HeroSlideshow } from '@/components/HeroSlideshow';
+import { StatisticsSection } from '@/components/StatisticsSection';
+import { EducationalContent } from '@/components/EducationalContent';
+import { SolutionsSection } from '@/components/SolutionsSection';
+import { CallToAction } from '@/components/CallToAction';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Stop Single-Use Plastic Waste",
+            "description": "Environmental awareness campaign about single-use plastic pollution and actionable solutions",
+            "url": "https://stop-plastic-waste.lovable.app",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Environmental Action Philippines",
+              "description": "Fighting plastic pollution through education and community action"
+            }
+          })
+        }}
+      />
+      
+      <HeroSlideshow />
+      <StatisticsSection />
+      <EducationalContent />
+      <SolutionsSection />
+      <CallToAction />
+    </main>
   );
 };
 
