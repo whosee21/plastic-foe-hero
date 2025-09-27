@@ -97,11 +97,11 @@ export const HeroSlideshow = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-4 font-semibold animate-slide-in">
-            {current.caption}
+            Single-use plastic waste is one of the Philippines' biggest environmental challenges
           </p>
           
           <p className="text-lg md:text-xl mb-8 text-blue-100 animate-slide-in">
-            {current.subtitle}
+            Every year, the country generates around 2.7 million metric tons of plastic waste, with a large portion mismanaged and leaking into rivers and oceans (World Bank, 2021)
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

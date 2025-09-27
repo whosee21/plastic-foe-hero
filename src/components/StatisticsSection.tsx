@@ -29,10 +29,10 @@ export const StatisticsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            The Devastating Numbers
+            Current Situation
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The plastic crisis demands immediate action. These statistics reveal the urgency of the situation we face.
+            The Philippines has been called the "sachet economy", with Filipinos consuming about 163 million plastic sachets every day (Böll Foundation SEA, 2019). Only about 28% of key plastic resins are recycled, leaving most plastics in landfills, waterways, or the ocean (World Bank, 2021).
           </p>
         </div>
 
