@@ -123,33 +123,51 @@ export const EducationalContent = () => {
 
         <div className="mt-12 text-center">
           <h4 className="text-lg font-semibold mb-4 text-foreground">Scientific Research Sources</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
             <a 
-              href="https://www.pnas.org/doi/10.1073/pnas.1502108112" 
+              href="https://openknowledge.worldbank.org/handle/10986/35608" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
             >
-              <div className="font-medium text-primary">PNAS Journal</div>
-              <div className="text-muted-foreground">Seabird plastic ingestion study</div>
+              <div className="font-medium text-primary">World Bank (2021)</div>
+              <div className="text-muted-foreground">Market Study for the Philippines: Plastics Circularity Opportunities and Barriers</div>
             </a>
             <a 
-              href="https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution" 
+              href="https://doi.org/10.1126/science.1260352" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
             >
-              <div className="font-medium text-primary">World Health Organization</div>
-              <div className="text-muted-foreground">Microplastics health impact</div>
+              <div className="font-medium text-primary">Jambeck et al. (2015)</div>
+              <div className="text-muted-foreground">Plastic waste inputs from land into the ocean. Science</div>
             </a>
             <a 
-              href="https://www.sciencedirect.com/science/article/pii/S0025326X16307639" 
+              href="https://ph.boell.org/en/2019/09/25/plastic-atlas" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
             >
-              <div className="font-medium text-primary">Marine Pollution Bulletin</div>
-              <div className="text-muted-foreground">Economic impact assessment</div>
+              <div className="font-medium text-primary">Böll Foundation (2019)</div>
+              <div className="text-muted-foreground">Plastic Atlas: Facts and figures about synthetic polymers</div>
+            </a>
+            <a 
+              href="https://doi.org/10.1016/j.marpolbul.2014.12.041" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">Gall & Thompson (2015)</div>
+              <div className="text-muted-foreground">The impact of debris on marine life. Marine Pollution Bulletin</div>
+            </a>
+            <a 
+              href="https://www.unep.org/resources/report/single-use-plastics-roadmap-sustainability" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">UNEP (2018)</div>
+              <div className="text-muted-foreground">Single-use plastics: A roadmap for sustainability</div>
             </a>
           </div>
         </div>

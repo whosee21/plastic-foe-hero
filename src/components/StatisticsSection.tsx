@@ -97,42 +97,51 @@ export const StatisticsSection = () => {
 
         <div className="mt-12 text-center">
           <h4 className="text-lg font-semibold mb-4 text-foreground">Sources & References</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
             <a 
-              href="https://www.unep.org/news-and-stories/press-release/plastic-planet-how-tiny-plastic-particles-are-polluting-our-soil" 
+              href="https://openknowledge.worldbank.org/handle/10986/35608" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
             >
-              <div className="font-medium text-primary">UN Environment Programme</div>
-              <div className="text-muted-foreground">Global plastic waste statistics</div>
+              <div className="font-medium text-primary">World Bank (2021)</div>
+              <div className="text-muted-foreground">Market Study for the Philippines: Plastics Circularity Opportunities and Barriers</div>
             </a>
             <a 
-              href="https://www.greenpeace.org/philippines/story/5472/philippines-top-plastic-polluter-in-the-world/" 
+              href="https://doi.org/10.1126/science.1260352" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
             >
-              <div className="font-medium text-primary">Greenpeace Philippines</div>
-              <div className="text-muted-foreground">Philippines plastic pollution data</div>
+              <div className="font-medium text-primary">Jambeck et al. (2015)</div>
+              <div className="text-muted-foreground">Plastic waste inputs from land into the ocean. Science</div>
             </a>
             <a 
-              href="https://www.nature.com/articles/s41598-020-79304-6" 
+              href="https://ph.boell.org/en/2019/09/25/plastic-atlas" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
             >
-              <div className="font-medium text-primary">Nature Scientific Reports</div>
-              <div className="text-muted-foreground">Marine plastic pollution research</div>
+              <div className="font-medium text-primary">Böll Foundation (2019)</div>
+              <div className="text-muted-foreground">Plastic Atlas: Facts and figures about synthetic polymers</div>
             </a>
             <a 
-              href="https://www.worldwildlife.org/stories/how-much-plastic-is-in-the-ocean" 
+              href="https://doi.org/10.1016/j.marpolbul.2014.12.041" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
             >
-              <div className="font-medium text-primary">World Wildlife Fund</div>
-              <div className="text-muted-foreground">Ocean plastic impact on wildlife</div>
+              <div className="font-medium text-primary">Gall & Thompson (2015)</div>
+              <div className="text-muted-foreground">The impact of debris on marine life. Marine Pollution Bulletin</div>
+            </a>
+            <a 
+              href="https://www.unep.org/resources/report/single-use-plastics-roadmap-sustainability" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">UNEP (2018)</div>
+              <div className="text-muted-foreground">Single-use plastics: A roadmap for sustainability</div>
             </a>
           </div>
         </div>
