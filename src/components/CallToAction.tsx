@@ -98,17 +98,17 @@ export const CallToAction = () => {
                 <span>Facebook</span>
               </Button>
               
-              <Button onClick={() => shareOnSocial('twitter')} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800">
+              <Button onClick={() => shareOnSocial('twitter')} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-950 hover:bg-slate-800">
                 <Twitter className="w-5 h-5" />
                 <span>X (Twitter)</span>
               </Button>
               
-              <Button onClick={() => shareOnSocial('instagram')} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800">
+              <Button onClick={() => shareOnSocial('instagram')} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-950 hover:bg-slate-800">
                 <Instagram className="w-5 h-5" />
                 <span>Instagram</span>
               </Button>
               
-              <Button onClick={copyLink} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800">
+              <Button onClick={copyLink} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-950 hover:bg-slate-800">
                 <Share2 className="w-5 h-5" />
                 <span>Copy Link</span>
               </Button>
@@ -146,7 +146,7 @@ export const CallToAction = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 Contact Local Officials
               </Button>
-              <Button variant="outline-hero" size="lg" className="text-lg px-8 py-6 bg-slate-900 hover:bg-slate-800">
+              <Button variant="outline-hero" size="lg" className="text-lg px-8 py-6 bg-slate-950 hover:bg-slate-800">
                 Find Local Groups
               </Button>
             </div>
