@@ -3,28 +3,26 @@ import { Mail, Facebook, Twitter, Instagram, Share2, CheckCircle } from 'lucide-
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-
 export const CallToAction = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
       setIsSubscribed(true);
       toast({
         title: "Welcome to the movement!",
-        description: "You'll receive updates on how to make a bigger impact.",
+        description: "You'll receive updates on how to make a bigger impact."
       });
       setEmail('');
     }
   };
-
   const shareOnSocial = (platform: string) => {
     const url = window.location.href;
     const text = "Join me in fighting plastic pollution! Together we can stop the plastic crisis and protect our planet. 🌍";
-    
     let shareUrl = '';
     switch (platform) {
       case 'facebook':
@@ -38,26 +36,22 @@ export const CallToAction = () => {
         navigator.clipboard.writeText(`${text} ${url}`);
         toast({
           title: "Link copied!",
-          description: "Share this on Instagram to spread awareness.",
+          description: "Share this on Instagram to spread awareness."
         });
         return;
     }
-    
     if (shareUrl) {
       window.open(shareUrl, '_blank', 'width=600,height=400');
     }
   };
-
   const copyLink = () => {
     navigator.clipboard.writeText(window.location.href);
     toast({
       title: "Link copied!",
-      description: "Share this page to spread awareness about plastic pollution.",
+      description: "Share this page to spread awareness about plastic pollution."
     });
   };
-
-  return (
-    <section className="py-20 bg-gradient-hero text-primary-foreground">
+  return <section className="py-20 bg-gradient-hero text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-up">
@@ -74,26 +68,15 @@ export const CallToAction = () => {
               Get Action Updates & Resources
             </h3>
             
-            {!isSubscribed ? (
-              <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/70"
-                  required
-                />
+            {!isSubscribed ? <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <Input type="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/70" required />
                 <Button type="submit" variant="action" size="lg">
                   Join Movement
                 </Button>
-              </form>
-            ) : (
-              <div className="flex items-center justify-center space-x-2 text-green-300">
+              </form> : <div className="flex items-center justify-center space-x-2 text-green-300">
                 <CheckCircle className="w-6 h-6" />
                 <span className="text-lg font-semibold">You're part of the movement!</span>
-              </div>
-            )}
+              </div>}
             
             <p className="text-sm opacity-70 mt-4">
               Get weekly action tips, local events, and impact updates. Unsubscribe anytime.
@@ -110,42 +93,22 @@ export const CallToAction = () => {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                onClick={() => shareOnSocial('facebook')}
-                variant="outline-hero"
-                size="lg"
-                className="flex items-center space-x-2"
-              >
+              <Button onClick={() => shareOnSocial('facebook')} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-950 hover:bg-slate-800">
                 <Facebook className="w-5 h-5" />
                 <span>Facebook</span>
               </Button>
               
-              <Button
-                onClick={() => shareOnSocial('twitter')}
-                variant="outline-hero"
-                size="lg"
-                className="flex items-center space-x-2"
-              >
+              <Button onClick={() => shareOnSocial('twitter')} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800">
                 <Twitter className="w-5 h-5" />
                 <span>X (Twitter)</span>
               </Button>
               
-              <Button
-                onClick={() => shareOnSocial('instagram')}
-                variant="outline-hero"
-                size="lg"
-                className="flex items-center space-x-2"
-              >
+              <Button onClick={() => shareOnSocial('instagram')} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800">
                 <Instagram className="w-5 h-5" />
                 <span>Instagram</span>
               </Button>
               
-              <Button
-                onClick={copyLink}
-                variant="outline-hero"
-                size="lg"
-                className="flex items-center space-x-2"
-              >
+              <Button onClick={copyLink} variant="outline-hero" size="lg" className="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800">
                 <Share2 className="w-5 h-5" />
                 <span>Copy Link</span>
               </Button>
@@ -183,13 +146,12 @@ export const CallToAction = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 Contact Local Officials
               </Button>
-              <Button variant="outline-hero" size="lg" className="text-lg px-8 py-6">
+              <Button variant="outline-hero" size="lg" className="text-lg px-8 py-6 bg-slate-900 hover:bg-slate-800">
                 Find Local Groups
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
