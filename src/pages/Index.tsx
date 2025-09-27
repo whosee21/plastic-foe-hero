@@ -3,6 +3,7 @@ import { StatisticsSection } from '@/components/StatisticsSection';
 import { EducationalContent } from '@/components/EducationalContent';
 import { SolutionsSection } from '@/components/SolutionsSection';
 import { CallToAction } from '@/components/CallToAction';
+import { SourcesSection } from '@/components/SourcesSection';
 
 const Index = () => {
   return (
@@ -31,6 +32,7 @@ const Index = () => {
       <EducationalContent />
       <SolutionsSection />
       <CallToAction />
+      <SourcesSection />
     </main>
   );
 };
