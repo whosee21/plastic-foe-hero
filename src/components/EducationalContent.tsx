@@ -120,6 +120,39 @@ export const EducationalContent = () => {
             </div>
           </div>
         </div>
+
+        <div className="mt-12 text-center">
+          <h4 className="text-lg font-semibold mb-4 text-foreground">Scientific Research Sources</h4>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <a 
+              href="https://www.pnas.org/doi/10.1073/pnas.1502108112" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">PNAS Journal</div>
+              <div className="text-muted-foreground">Seabird plastic ingestion study</div>
+            </a>
+            <a 
+              href="https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">World Health Organization</div>
+              <div className="text-muted-foreground">Microplastics health impact</div>
+            </a>
+            <a 
+              href="https://www.sciencedirect.com/science/article/pii/S0025326X16307639" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">Marine Pollution Bulletin</div>
+              <div className="text-muted-foreground">Economic impact assessment</div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

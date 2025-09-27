@@ -94,6 +94,48 @@ export const StatisticsSection = () => {
             </div>
           </div>
         </div>
+
+        <div className="mt-12 text-center">
+          <h4 className="text-lg font-semibold mb-4 text-foreground">Sources & References</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <a 
+              href="https://www.unep.org/news-and-stories/press-release/plastic-planet-how-tiny-plastic-particles-are-polluting-our-soil" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">UN Environment Programme</div>
+              <div className="text-muted-foreground">Global plastic waste statistics</div>
+            </a>
+            <a 
+              href="https://www.greenpeace.org/philippines/story/5472/philippines-top-plastic-polluter-in-the-world/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">Greenpeace Philippines</div>
+              <div className="text-muted-foreground">Philippines plastic pollution data</div>
+            </a>
+            <a 
+              href="https://www.nature.com/articles/s41598-020-79304-6" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">Nature Scientific Reports</div>
+              <div className="text-muted-foreground">Marine plastic pollution research</div>
+            </a>
+            <a 
+              href="https://www.worldwildlife.org/stories/how-much-plastic-is-in-the-ocean" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-card border border-border hover:bg-muted transition-colors"
+            >
+              <div className="font-medium text-primary">World Wildlife Fund</div>
+              <div className="text-muted-foreground">Ocean plastic impact on wildlife</div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
