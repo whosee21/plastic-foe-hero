@@ -25,10 +25,11 @@ export const EducationalContent = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Impact on Ecosystems & Humans
+            Understanding the Crisis
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Globally, studies estimate that 4.8 to 12.7 million metric tons of plastic enter the oceans each year (Jambeck et al., 2015). Once in the marine environment, plastics break down into microplastics that harm ecosystems and can even enter the human food chain. Research shows that plastic debris causes entanglement, ingestion, and habitat damage for countless species (Gall & Thompson, 2015).
+            Single-use plastics create a ripple effect of destruction that touches every aspect of life on Earth. 
+            Here's how this crisis affects our environment, health, communities, and future.
           </p>
         </div>
 
@@ -64,10 +65,10 @@ export const EducationalContent = () => {
         <div className="mt-16 p-8 rounded-xl bg-gradient-hero text-primary-foreground">
           <div className="text-center">
             <h3 className="text-3xl font-bold mb-4">
-              Why It Matters
+              The Science is Clear
             </h3>
             <p className="text-xl mb-6 opacity-90">
-              Plastic pollution not only harms marine animals but also threatens livelihoods, fisheries, and human health. The United Nations warns that single-use plastics are one of the greatest environmental threats of our time and calls for urgent global action (UNEP, 2018).
+              Peer-reviewed research confirms that immediate, decisive action is needed to prevent catastrophic environmental collapse.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
