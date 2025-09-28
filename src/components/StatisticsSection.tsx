@@ -39,9 +39,10 @@ export const StatisticsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {statistics.map((stat, index) => {
           const IconComponent = stat.icon;
-          return <div key={index} className="text-center p-8 rounded-xl bg-card shadow-soft hover:shadow-strong transition-all duration-300 transform hover:scale-105 animate-fade-up" style={{
-            animationDelay: `${index * 0.2}s`
-          }}>
+           return <div key={index} className="text-center p-8 rounded-xl bg-card card-hover animate-fade-up" style={{
+             animationDelay: `${index * 0.2}s`,
+             boxShadow: 'var(--shadow-card)'
+           }}>
                 <div className={`inline-flex p-4 rounded-full bg-muted mb-6 ${stat.color}`}>
                   <IconComponent className="w-8 h-8" />
                 </div>
@@ -64,20 +65,23 @@ export const StatisticsSection = () => {
         <div className="mt-16 p-8 rounded-xl bg-primary/5 border border-primary/20">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4 text-primary">
-              Philippines-Specific Impact
+              Current Situation
             </h3>
+            <p className="text-lg text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed">
+              The Philippines has been called the "sachet economy", with Filipinos consuming about 163 million plastic sachets every day (Böll Foundation SEA, 2019). Only about 28% of key plastic resins are recycled, leaving most plastics in landfills, waterways, or the ocean (World Bank, 2021).
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-urgent mb-2">2.7M</div>
                 <p className="text-sm text-muted-foreground">Tons of plastic waste generated annually in the Philippines</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary mb-2">20%</div>
-                <p className="text-sm text-muted-foreground">Of global ocean plastic pollution comes from just 5 Asian countries including Philippines</p>
+                <div className="text-3xl font-bold text-secondary mb-2">163M</div>
+                <p className="text-sm text-muted-foreground">Plastic sachets consumed daily by Filipinos</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-destructive mb-2">7,641</div>
-                <p className="text-sm text-muted-foreground">Islands in the Philippines threatened by marine plastic pollution</p>
+                <div className="text-3xl font-bold text-destructive mb-2">28%</div>
+                <p className="text-sm text-muted-foreground">Recycling rate for key plastic resins in the Philippines</p>
               </div>
             </div>
           </div>

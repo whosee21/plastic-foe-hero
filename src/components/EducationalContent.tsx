@@ -1,8 +1,8 @@
 import { Heart, Leaf, Users, AlertTriangle } from 'lucide-react';
 const impacts = [{
   icon: Leaf,
-  title: "Environmental Devastation",
-  description: "Single-use plastics break down into microplastics that contaminate soil, water, and air. These tiny particles persist for centuries, disrupting ecosystems and entering the food chain at every level.",
+  title: "Impact on Ecosystems & Humans",
+  description: "Globally, studies estimate that 4.8 to 12.7 million metric tons of plastic enter the oceans each year (Jambeck et al., 2015). Once in the marine environment, plastics break down into microplastics that harm ecosystems and can even enter the human food chain. Research shows that plastic debris causes entanglement, ingestion, and habitat damage for countless species (Gall & Thompson, 2015).",
   effects: ["Ocean acidification from plastic chemicals", "Habitat destruction in marine and terrestrial environments", "Disruption of natural carbon cycles", "Contamination of agricultural lands"]
 }, {
   icon: Heart,
@@ -11,8 +11,8 @@ const impacts = [{
   effects: ["Hormone disruption and fertility issues", "Increased cancer risks from toxic chemicals", "Respiratory problems from airborne microplastics", "Cardiovascular disease links to plastic additives"]
 }, {
   icon: Users,
-  title: "Community Impact",
-  description: "Plastic pollution disproportionately affects vulnerable communities, particularly in developing nations. Waste management failures create environmental injustice and economic hardship.",
+  title: "Why It Matters",
+  description: "Plastic pollution not only harms marine animals but also threatens livelihoods, fisheries, and human health. The United Nations warns that single-use plastics are one of the greatest environmental threats of our time (UNEP, 2018).",
   effects: ["Coastal communities losing livelihoods to pollution", "Indigenous peoples facing cultural site contamination", "Low-income areas bearing waste disposal burden", "Tourism industry losses from polluted environments"]
 }, {
   icon: AlertTriangle,
@@ -36,9 +36,10 @@ export const EducationalContent = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {impacts.map((impact, index) => {
           const IconComponent = impact.icon;
-          return <div key={index} className="p-8 rounded-xl bg-card border border-border shadow-soft hover:shadow-strong transition-all duration-300 animate-fade-up" style={{
-            animationDelay: `${index * 0.3}s`
-          }}>
+           return <div key={index} className="p-8 rounded-xl bg-card border border-border card-hover animate-fade-up" style={{
+             animationDelay: `${index * 0.3}s`,
+             boxShadow: 'var(--shadow-card)'
+           }}>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 p-3 rounded-full bg-primary/10">
                     <IconComponent className="w-8 h-8 text-primary" />

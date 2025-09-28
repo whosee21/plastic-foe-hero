@@ -6,59 +6,63 @@
 
 @layer base {
   :root {
-    --background: 48 100% 98%;
-    --foreground: 156 25% 15%;
+    /* Semi-dark theme with charcoal gradient background */
+    --background: 0 0% 12%; /* #1e1e1e */
+    --background-secondary: 0 0% 15%; /* #262626 */
+    --foreground: 0 0% 93%; /* #ECECEC body text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 156 25% 15%;
+    --card: 0 0% 12%; /* #1F1F1F - raised panels */
+    --card-foreground: 0 0% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 156 25% 15%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 93%;
 
-    /* Ocean-inspired primary */
-    --primary: 200 85% 35%;
-    --primary-foreground: 0 0% 98%;
-    --primary-light: 200 75% 55%;
-    --primary-dark: 200 90% 25%;
+    /* Teal/aqua accent for headings - #3DDC97 */
+    --primary: 162 75% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 162 70% 64%; /* #4FE3B0 - links */
+    --primary-dark: 162 65% 44%; /* #39C89A - visited links */
 
-    /* Forest green secondary */
-    --secondary: 140 60% 45%;
-    --secondary-foreground: 0 0% 98%;
-    --secondary-light: 140 55% 65%;
-    --secondary-dark: 140 70% 35%;
+    /* Button/CTA color - #2CB67D */
+    --secondary: 162 65% 46%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 162 60% 56%;
+    --secondary-dark: 162 70% 36%;
 
-    /* Earth tones */
-    --earth: 35 40% 70%;
-    --earth-foreground: 156 25% 15%;
-    --earth-dark: 35 50% 50%;
+    /* Earth tones adjusted for dark theme */
+    --earth: 35 40% 60%;
+    --earth-foreground: 0 0% 93%;
+    --earth-dark: 35 50% 40%;
 
     /* Urgent action colors */
     --urgent: 25 95% 53%;
-    --urgent-foreground: 0 0% 98%;
+    --urgent-foreground: 0 0% 100%;
     --urgent-light: 25 90% 63%;
 
-    --muted: 48 30% 95%;
-    --muted-foreground: 156 15% 45%;
+    --muted: 0 0% 18%; /* Slightly lighter than card */
+    --muted-foreground: 0 0% 74%; /* #BDBDBD secondary text */
 
-    --accent: 140 60% 45%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 162 75% 54%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 48 20% 90%;
-    --input: 48 20% 90%;
-    --ring: 200 85% 35%;
+    --border: 0 0% 18%; /* #2F2F2F dividers */
+    --input: 0 0% 18%;
+    --ring: 162 75% 54%; /* Teal focus ring */
 
     /* Custom gradients */
+    --gradient-background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--background-secondary)));
     --gradient-ocean: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
     --gradient-earth: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--earth)));
     --gradient-hero: linear-gradient(180deg, hsl(var(--primary-dark)), hsl(var(--primary)));
     --gradient-action: linear-gradient(135deg, hsl(var(--urgent)), hsl(var(--urgent-light)));
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px hsla(var(--primary), 0.1);
-    --shadow-strong: 0 8px 40px hsla(var(--primary), 0.2);
+    /* Shadows - soft shadow with blur 16 */
+    --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.35);
+    --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.45);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.35);
     --shadow-urgent: 0 4px 20px hsla(var(--urgent), 0.3);
 
     --radius: 0.5rem;
@@ -125,6 +129,78 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    font-size: 16px;
+    line-height: 1.6;
+    background: var(--gradient-background);
+  }
+
+  /* Motion-safe: respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Link animations and interactions */
+  a {
+    @apply transition-all duration-150 ease-out;
+    color: hsl(var(--primary-light));
+  }
+
+  a:hover {
+    filter: brightness(1.1);
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: hsl(var(--primary-dark));
+  }
+
+  a:focus {
+    @apply outline-none ring-2 ring-primary;
+    border-radius: 2px;
+  }
+
+  /* Button hover effects */
+  button {
+    @apply transition-all duration-150 ease-out;
+  }
+
+  button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  button:active {
+    transform: translateY(0);
+  }
+
+  button:focus {
+    @apply outline-none ring-2 ring-primary;
+    border-radius: 4px;
+  }
+
+  /* Card hover effects - intensify shadow without lift */
+  .card-hover:hover {
+    box-shadow: var(--shadow-strong);
+  }
+
+  /* Navigation underline animation */
+  .nav-link {
+    @apply relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 origin-center transition-transform duration-180 ease-out;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100;
   }
 }
