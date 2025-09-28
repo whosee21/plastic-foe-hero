@@ -28,6 +28,18 @@ const Index = () => {
       />
       
       <HeroSlideshow />
+      
+      {/* Disclaimer Box */}
+      <div className="py-8 px-4 bg-background">
+        <div 
+          id="disclaimer" 
+          className="bg-white/8 border-l-4 border-accent text-gray-300 text-sm md:text-base italic p-4 rounded-lg mx-auto max-w-3xl text-left leading-relaxed"
+          tabIndex={-1}
+        >
+          <strong>Disclaimer:</strong> This website is part of a school project. It is created for educational purposes to provide information on an environmental issue and to spark collective actions for the preservation and protection of the Earth's ecosystems.
+        </div>
+      </div>
+      
       <StatisticsSection />
       <EducationalContent />
       <SolutionsSection />

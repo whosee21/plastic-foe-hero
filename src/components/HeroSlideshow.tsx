@@ -183,15 +183,6 @@ export const HeroSlideshow = () => {
             {current.subtitle}
           </p>
 
-          {/* Disclaimer Box */}
-          <div 
-            id="disclaimer" 
-            className="bg-white/8 border-l-4 border-accent text-gray-300 text-sm md:text-base italic p-4 rounded-lg mt-4 mb-8 mx-auto max-w-3xl text-left leading-relaxed"
-            tabIndex={-1}
-          >
-            <strong>Disclaimer:</strong> This website is part of a school project. It is created for educational purposes to provide information on an environmental issue and to spark collective actions for the preservation and protection of the Earth's ecosystems.
-          </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="action" size="lg" className="text-lg px-8 py-6">
               Take Action Now
