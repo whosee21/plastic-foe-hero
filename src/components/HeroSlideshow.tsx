@@ -6,66 +6,53 @@ import landfillWaste from '@/assets/landfill-waste.jpg';
 import beachContamination from '@/assets/beach-contamination.jpg';
 import wildlifeSuffering from '@/assets/wildlife-suffering.jpg';
 import waterContamination from '@/assets/water-contamination.jpg';
-
-const slides = [
-  {
-    image: oceanPollution,
-    icon: Waves,
-    caption: "8 million tons of plastic enter our oceans every year",
-    subtitle: "Marine life pays the ultimate price"
-  },
-  {
-    image: landfillWaste,
-    icon: Mountain,
-    caption: "Plastic waste takes 450+ years to decompose",
-    subtitle: "Our landfills are overflowing with single-use plastics"
-  },
-  {
-    image: beachContamination,
-    icon: TreePine,
-    caption: "1 million plastic bottles are bought every minute",
-    subtitle: "Pristine beaches become graveyards of plastic waste"
-  },
-  {
-    image: wildlifeSuffering,
-    icon: Fish,
-    caption: "100,000 marine animals die from plastic pollution annually",
-    subtitle: "Wildlife mistakes plastic for food with fatal consequences"
-  },
-  {
-    image: waterContamination,
-    icon: Droplets,
-    caption: "Microplastics contaminate our drinking water",
-    subtitle: "Plastic pollution affects every level of the food chain"
-  }
-];
-
+const slides = [{
+  image: oceanPollution,
+  icon: Waves,
+  caption: "8 million tons of plastic enter our oceans every year",
+  subtitle: "Marine life pays the ultimate price"
+}, {
+  image: landfillWaste,
+  icon: Mountain,
+  caption: "Plastic waste takes 450+ years to decompose",
+  subtitle: "Our landfills are overflowing with single-use plastics"
+}, {
+  image: beachContamination,
+  icon: TreePine,
+  caption: "1 million plastic bottles are bought every minute",
+  subtitle: "Pristine beaches become graveyards of plastic waste"
+}, {
+  image: wildlifeSuffering,
+  icon: Fish,
+  caption: "100,000 marine animals die from plastic pollution annually",
+  subtitle: "Wildlife mistakes plastic for food with fatal consequences"
+}, {
+  image: waterContamination,
+  icon: Droplets,
+  caption: "Microplastics contaminate our drinking water",
+  subtitle: "Plastic pollution affects every level of the food chain"
+}];
 export const HeroSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide(prev => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setDropdownOpen(false);
       }
     };
-
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setDropdownOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('keydown', handleKeyDown);
     return () => {
@@ -73,11 +60,12 @@ export const HeroSlideshow = () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
-
   const smoothScrollTo = (elementId: string) => {
     const element = document.getElementById(elementId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
       // Set focus and highlight
       element.tabIndex = -1;
       element.focus();
@@ -90,76 +78,43 @@ export const HeroSlideshow = () => {
     }
     setDropdownOpen(false);
   };
-
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide(prev => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
-
   const current = slides[currentSlide];
   const IconComponent = current.icon;
-
-  return (
-    <section className="relative h-screen overflow-hidden">
+  return <section className="relative h-screen overflow-hidden">
       {/* School Project Badge */}
       <div className="absolute top-4 right-4 z-30">
         <div className="relative" ref={dropdownRef}>
           <div className="flex items-center bg-accent text-white font-bold text-xs uppercase tracking-wider px-3 py-2 rounded-full shadow-lg hover:brightness-110 transition-all duration-150">
-            <button
-              onClick={() => smoothScrollTo('disclaimer')}
-              className="focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent rounded-sm"
-              aria-label="Jump to disclaimer"
-              title="Jump to disclaimer"
-            >
+            <button onClick={() => smoothScrollTo('disclaimer')} aria-label="Jump to disclaimer" title="Jump to disclaimer" className="focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent rounded-sm text-[#070a1c]">
               School Project
             </button>
-            <button
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="ml-2 p-1 hover:bg-white/20 rounded-full transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent"
-              aria-label="More options"
-            >
+            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="ml-2 p-1 hover:bg-white/20 rounded-full transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent" aria-label="More options">
               <MoreVertical className="w-3 h-3" />
             </button>
           </div>
           
-          {dropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-md shadow-lg overflow-hidden animate-scale-in">
-              <button
-                onClick={() => smoothScrollTo('disclaimer')}
-                className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-150 focus:outline-none focus:bg-accent focus:text-accent-foreground"
-              >
+          {dropdownOpen && <div className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-md shadow-lg overflow-hidden animate-scale-in">
+              <button onClick={() => smoothScrollTo('disclaimer')} className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-150 focus:outline-none focus:bg-accent focus:text-accent-foreground">
                 View disclaimer
               </button>
-              <button
-                onClick={() => smoothScrollTo('sources')}
-                className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-150 focus:outline-none focus:bg-accent focus:text-accent-foreground"
-              >
+              <button onClick={() => smoothScrollTo('sources')} className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-150 focus:outline-none focus:bg-accent focus:text-accent-foreground">
                 View sources
               </button>
-            </div>
-          )}
+            </div>}
         </div>
       </div>
       {/* Background Image */}
       <div className="absolute inset-0">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img
-              src={slide.image}
-              alt={slide.caption}
-              className="w-full h-full object-cover"
-            />
+        {slides.map((slide, index) => <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
+            <img src={slide.image} alt={slide.caption} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/50" />
-          </div>
-        ))}
+          </div>)}
       </div>
 
       {/* Content Overlay */}
@@ -197,34 +152,17 @@ export const HeroSlideshow = () => {
       {/* Navigation */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-white scale-125' 
-                  : 'bg-white/50 hover:bg-white/75'
-              }`}
-            />
-          ))}
+          {slides.map((_, index) => <button key={index} onClick={() => setCurrentSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'}`} />)}
         </div>
       </div>
 
       {/* Arrow Navigation */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
-      >
+      <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
         <ChevronLeft className="w-6 h-6 text-white" />
       </button>
       
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
-      >
+      <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
         <ChevronRight className="w-6 h-6 text-white" />
       </button>
-    </section>
-  );
+    </section>;
 };
