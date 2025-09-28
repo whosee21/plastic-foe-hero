@@ -28,7 +28,7 @@ export const SourcesSection = () => {
   ];
 
   return (
-    <section id="sources" className="py-12 bg-background border-t border-border">
+    <section id="sources" className="py-12 bg-background border-t border-border" tabIndex={-1}>
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4 text-foreground">Sources</h2>
         

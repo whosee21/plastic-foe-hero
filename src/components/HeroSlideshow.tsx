@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Waves, Mountain, TreePine, Fish, Droplets } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { ChevronLeft, ChevronRight, Waves, Mountain, TreePine, Fish, Droplets, MoreVertical } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import oceanPollution from '@/assets/ocean-pollution.jpg';
 import landfillWaste from '@/assets/landfill-waste.jpg';
@@ -42,6 +42,8 @@ const slides = [
 
 export const HeroSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -50,6 +52,44 @@ export const HeroSlideshow = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      // Set focus and highlight
+      element.tabIndex = -1;
+      element.focus();
+      element.style.outline = '2px solid #3DDC97';
+      element.style.outlineOffset = '4px';
+      setTimeout(() => {
+        element.style.outline = '';
+        element.style.outlineOffset = '';
+      }, 1500);
+    }
+    setDropdownOpen(false);
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -64,6 +104,45 @@ export const HeroSlideshow = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
+      {/* School Project Badge */}
+      <div className="absolute top-4 right-4 z-30">
+        <div className="relative" ref={dropdownRef}>
+          <div className="flex items-center bg-accent text-white font-bold text-xs uppercase tracking-wider px-3 py-2 rounded-full shadow-lg hover:brightness-110 transition-all duration-150">
+            <button
+              onClick={() => smoothScrollTo('disclaimer')}
+              className="focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent rounded-sm"
+              aria-label="Jump to disclaimer"
+              title="Jump to disclaimer"
+            >
+              School Project
+            </button>
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="ml-2 p-1 hover:bg-white/20 rounded-full transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent"
+              aria-label="More options"
+            >
+              <MoreVertical className="w-3 h-3" />
+            </button>
+          </div>
+          
+          {dropdownOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-md shadow-lg overflow-hidden animate-scale-in">
+              <button
+                onClick={() => smoothScrollTo('disclaimer')}
+                className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-150 focus:outline-none focus:bg-accent focus:text-accent-foreground"
+              >
+                View disclaimer
+              </button>
+              <button
+                onClick={() => smoothScrollTo('sources')}
+                className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-150 focus:outline-none focus:bg-accent focus:text-accent-foreground"
+              >
+                View sources
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
       {/* Background Image */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -103,6 +182,15 @@ export const HeroSlideshow = () => {
           <p className="text-lg md:text-xl mb-8 text-blue-100 animate-slide-in">
             {current.subtitle}
           </p>
+
+          {/* Disclaimer Box */}
+          <div 
+            id="disclaimer" 
+            className="bg-white/8 border-l-4 border-accent text-gray-300 text-sm md:text-base italic p-4 rounded-lg mt-4 mb-8 mx-auto max-w-3xl text-left leading-relaxed"
+            tabIndex={-1}
+          >
+            <strong>Disclaimer:</strong> This website is part of a school project. It is created for educational purposes to provide information on an environmental issue and to spark collective actions for the preservation and protection of the Earth's ecosystems.
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="action" size="lg" className="text-lg px-8 py-6">
