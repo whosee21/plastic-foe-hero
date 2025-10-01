@@ -63,6 +63,32 @@ export const SourcesSection = () => {
         <p className="text-xs text-muted-foreground mt-8 pt-4 border-t border-border">
           Last updated: September 27, 2025 (UTC+8)
         </p>
+
+        {/* Photo Credits Section */}
+        <div className="mt-12 pt-8 border-t border-border">
+          <h3 className="text-lg font-bold mb-4 text-foreground">Photo Credits</h3>
+          <p className="text-xs text-muted-foreground mb-4">
+            All images on this site are from real photographers and are used under free licenses. We thank the following contributors:
+          </p>
+          <div className="space-y-2 text-xs text-muted-foreground">
+            <div>
+              <span className="font-medium">Hero Images:</span> Naja Bertolt Jensen, Dustan Woodhouse, Brian Yurasits, Sergei Wing, Catherine Sheila (
+              <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Unsplash</a>)
+            </div>
+            <div>
+              <span className="font-medium">Statistics Section:</span> Naja Bertolt Jensen (
+              <a href="https://unsplash.com/photos/_qhzF4XxYFE" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Unsplash</a>)
+            </div>
+            <div>
+              <span className="font-medium">Educational Section:</span> Pawel Czerwinski (
+              <a href="https://unsplash.com/photos/FV3GConVSss" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Unsplash</a>)
+            </div>
+            <div>
+              <span className="font-medium">Solutions Section:</span> Bluewater Sweden (
+              <a href="https://unsplash.com/photos/XMFZqrGyV-Q" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Unsplash</a>)
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ import {
   CheckCircle 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import reusableImg from '@/assets/reusable-alternatives.jpg';
+import reusableImg from '@/assets/reusable-products.jpg';
 
 const solutions = [
   {
@@ -162,12 +162,20 @@ export const SolutionsSection = () => {
 
         {/* Sustainable Alternatives Table */}
         <div className="grid lg:grid-cols-5 gap-8 items-center mb-16">
-          <div className="lg:col-span-2 rounded-xl overflow-hidden shadow-strong order-2 lg:order-1">
+          <div className="lg:col-span-2 rounded-xl overflow-hidden shadow-strong order-2 lg:order-1 relative">
             <img 
               src={reusableImg} 
               alt="Reusable sustainable alternatives to single-use plastic products" 
               className="w-full h-full object-cover"
             />
+            <a 
+              href="https://unsplash.com/photos/assorted-color-plastic-bottles-XMFZqrGyV-Q" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="absolute bottom-2 right-2 text-[11px] text-white/70 hover:text-white bg-black/40 hover:bg-black/60 px-2 py-1 rounded backdrop-blur-sm transition-all duration-200 italic"
+            >
+              Source: Unsplash / Bluewater Sweden
+            </a>
           </div>
           
           <div className="lg:col-span-3 bg-gradient-earth rounded-xl p-8 order-1 lg:order-2">
