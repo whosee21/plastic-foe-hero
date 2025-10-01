@@ -1,4 +1,5 @@
 import { Heart, Leaf, Users, AlertTriangle } from 'lucide-react';
+import recyclingImg from '@/assets/recycling-sustainable.jpg';
 const impacts = [{
   icon: Leaf,
   title: "Impact on Ecosystems & Humans",
@@ -63,26 +64,36 @@ export const EducationalContent = () => {
         })}
         </div>
 
-        <div className="mt-16 p-8 rounded-xl bg-gradient-hero text-primary-foreground">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold mb-4">
-              The Science is Clear
-            </h3>
-            <p className="text-xl mb-6 opacity-90">
-              Peer-reviewed research confirms that immediate, decisive action is needed to prevent catastrophic environmental collapse.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
-                <div className="text-2xl font-bold mb-2">99%</div>
-                <p className="text-sm opacity-80">Of seabirds predicted to have plastic in their stomachs by 2050</p>
-              </div>
-              <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
-                <div className="text-2xl font-bold mb-2">5g</div>
-                <p className="text-sm opacity-80">Of microplastics consumed by average person weekly (credit card equivalent)</p>
-              </div>
-              <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
-                <div className="text-2xl font-bold mb-2">$139B</div>
-                <p className="text-sm opacity-80">Annual economic damage from marine plastic pollution globally</p>
+        <div className="mt-16 grid lg:grid-cols-5 gap-8 items-center">
+          <div className="lg:col-span-2 rounded-xl overflow-hidden shadow-strong">
+            <img 
+              src={recyclingImg} 
+              alt="Recycling and sustainable waste management practices reducing plastic pollution" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          <div className="lg:col-span-3 p-8 rounded-xl bg-gradient-hero text-primary-foreground">
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-4">
+                The Science is Clear
+              </h3>
+              <p className="text-xl mb-6 opacity-90">
+                Peer-reviewed research confirms that immediate, decisive action is needed to prevent catastrophic environmental collapse.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
+                  <div className="text-2xl font-bold mb-2">99%</div>
+                  <p className="text-sm opacity-80">Of seabirds predicted to have plastic in their stomachs by 2050</p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
+                  <div className="text-2xl font-bold mb-2">5g</div>
+                  <p className="text-sm opacity-80">Of microplastics consumed by average person weekly (credit card equivalent)</p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
+                  <div className="text-2xl font-bold mb-2">$139B</div>
+                  <p className="text-sm opacity-80">Annual economic damage from marine plastic pollution globally</p>
+                </div>
               </div>
             </div>
           </div>

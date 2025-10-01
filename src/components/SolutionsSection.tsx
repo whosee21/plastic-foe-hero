@@ -9,6 +9,7 @@ import {
   CheckCircle 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import reusableImg from '@/assets/reusable-alternatives.jpg';
 
 const solutions = [
   {
@@ -160,10 +161,19 @@ export const SolutionsSection = () => {
         </div>
 
         {/* Sustainable Alternatives Table */}
-        <div className="bg-gradient-earth rounded-xl p-8 mb-16">
-          <h3 className="text-3xl font-bold mb-8 text-center text-secondary-foreground">
-            Smart Swaps for Immediate Impact
-          </h3>
+        <div className="grid lg:grid-cols-5 gap-8 items-center mb-16">
+          <div className="lg:col-span-2 rounded-xl overflow-hidden shadow-strong order-2 lg:order-1">
+            <img 
+              src={reusableImg} 
+              alt="Reusable sustainable alternatives to single-use plastic products" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          <div className="lg:col-span-3 bg-gradient-earth rounded-xl p-8 order-1 lg:order-2">
+            <h3 className="text-3xl font-bold mb-8 text-center text-secondary-foreground">
+              Smart Swaps for Immediate Impact
+            </h3>
           
           <div className="overflow-x-auto">
             <table className="w-full">
@@ -188,6 +198,7 @@ export const SolutionsSection = () => {
                 ))}
               </tbody>
             </table>
+          </div>
           </div>
         </div>
 

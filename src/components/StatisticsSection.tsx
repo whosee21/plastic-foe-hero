@@ -1,4 +1,5 @@
 import { TrendingUp, Globe, Timer, Skull } from 'lucide-react';
+import oceanPlasticImg from '@/assets/ocean-plastic-real.jpg';
 const statistics = [{
   icon: Globe,
   number: "300M",
@@ -62,14 +63,23 @@ export const StatisticsSection = () => {
         })}
         </div>
 
-        <div className="mt-16 p-8 rounded-xl bg-primary/5 border border-primary/20">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4 text-primary">
-              Current Situation
-            </h3>
-            <p className="text-lg text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed">
-              The Philippines has been called the "sachet economy", with Filipinos consuming about 163 million plastic sachets every day (Böll Foundation SEA, 2019). Only about 28% of key plastic resins are recycled, leaving most plastics in landfills, waterways, or the ocean (World Bank, 2021).
-            </p>
+        <div className="mt-16 grid lg:grid-cols-2 gap-8 items-center">
+          <div className="rounded-xl overflow-hidden shadow-strong">
+            <img 
+              src={oceanPlasticImg} 
+              alt="Plastic pollution in ocean water showing environmental damage to marine ecosystems" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          <div className="p-8 rounded-xl bg-primary/5 border border-primary/20">
+            <div className="text-center lg:text-left">
+              <h3 className="text-2xl font-bold mb-4 text-primary">
+                Current Situation
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                The Philippines has been called the "sachet economy", with Filipinos consuming about 163 million plastic sachets every day (Böll Foundation SEA, 2019). Only about 28% of key plastic resins are recycled, leaving most plastics in landfills, waterways, or the ocean (World Bank, 2021).
+              </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-urgent mb-2">2.7M</div>
@@ -84,6 +94,7 @@ export const StatisticsSection = () => {
                 <p className="text-sm text-muted-foreground">Recycling rate for key plastic resins in the Philippines</p>
               </div>
             </div>
+          </div>
           </div>
         </div>
 
