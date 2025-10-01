@@ -10,27 +10,37 @@ const slides = [{
   image: oceanPollution,
   icon: Waves,
   caption: "8 million tons of plastic enter our oceans every year",
-  subtitle: "Marine life pays the ultimate price"
+  subtitle: "Marine life pays the ultimate price",
+  source: "Naja Bertolt Jensen on Unsplash",
+  sourceUrl: "https://unsplash.com/photos/blue-and-white-labeled-box-bjq3HjRmXJg"
 }, {
   image: landfillWaste,
   icon: Mountain,
   caption: "Plastic waste takes 450+ years to decompose",
-  subtitle: "Our landfills are overflowing with single-use plastics"
+  subtitle: "Our landfills are overflowing with single-use plastics",
+  source: "Dustan Woodhouse on Unsplash",
+  sourceUrl: "https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-vDYt7CJFx9M"
 }, {
   image: beachContamination,
   icon: TreePine,
   caption: "1 million plastic bottles are bought every minute",
-  subtitle: "Pristine beaches become graveyards of plastic waste"
+  subtitle: "Pristine beaches become graveyards of plastic waste",
+  source: "Brian Yurasits on Unsplash",
+  sourceUrl: "https://unsplash.com/photos/plastic-bottle-on-seashore-LMncdhLDFUM"
 }, {
   image: wildlifeSuffering,
   icon: Fish,
   caption: "100,000 marine animals die from plastic pollution annually",
-  subtitle: "Wildlife mistakes plastic for food with fatal consequences"
+  subtitle: "Wildlife mistakes plastic for food with fatal consequences",
+  source: "Sergei Wing on Unsplash",
+  sourceUrl: "https://unsplash.com/photos/seagull-on-gray-sand-VJDCx_1ap0g"
 }, {
   image: waterContamination,
   icon: Droplets,
   caption: "Microplastics contaminate our drinking water",
-  subtitle: "Plastic pollution affects every level of the food chain"
+  subtitle: "Plastic pollution affects every level of the food chain",
+  source: "Catherine Sheila on Unsplash",
+  sourceUrl: "https://unsplash.com/photos/white-plastic-pack-on-white-textile-gkP1bqGC7qE"
 }];
 export const HeroSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -114,6 +124,16 @@ export const HeroSlideshow = () => {
         {slides.map((slide, index) => <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
             <img src={slide.image} alt={slide.caption} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/50" />
+            {/* Image Source Attribution */}
+            <a 
+              href={slide.sourceUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="absolute bottom-2 right-2 text-xs text-white/70 hover:text-white bg-black/30 hover:bg-black/50 px-2 py-1 rounded backdrop-blur-sm transition-all duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Photo: {slide.source}
+            </a>
           </div>)}
       </div>
 
