@@ -74,11 +74,11 @@ export const SourcesSection = () => {
             <div>
               <span className="font-medium">Hero Slideshow:</span>
               <ul className="ml-4 mt-1 space-y-1">
-                <li>• <a href="https://unsplash.com/photos/uAUruElioNk" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">OCG Saving The Ocean</a> (Unsplash) - Ocean pollution</li>
+                <li>• <a href="https://unsplash.com/photos/eTNGOHCrWtg" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Naja Bertolt Jensen</a> (Unsplash) - Plastic bag in ocean</li>
                 <li>• <a href="https://www.pexels.com/photo/pile-of-garbage-3856436/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Tom Fisk</a> (Pexels) - Landfill waste</li>
-                <li>• <a href="https://www.pexels.com/photo/selective-focus-photography-of-trash-on-sandy-surface-3850512/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Artem Beliaikin</a> (Pexels) - Beach pollution</li>
-                <li>• <a href="https://www.pexels.com/photo/turtle-swimming-underwater-3671083/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Stijn Dijkstra</a> (Pexels) - Wildlife impact</li>
-                <li>• <a href="https://www.pexels.com/photo/blue-and-yellow-water-1114690/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Catherine Sheila</a> (Pexels) - Water contamination</li>
+                <li>• <a href="https://unsplash.com/photos/5fbJMCzqNDs" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Brian Yurasits</a> (Unsplash) - Plastic bottles on beach</li>
+                <li>• <a href="https://unsplash.com/photos/3TKMIxWJQhg" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">NOAA</a> (Unsplash) - Sea turtle entangled in fishing gear</li>
+                <li>• <a href="https://unsplash.com/photos/FfbVFLAVscw" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Sunyu Kim</a> (Unsplash) - Microplastics contamination</li>
               </ul>
             </div>
             <div>

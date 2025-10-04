@@ -1,18 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Waves, Mountain, TreePine, Fish, Droplets, MoreVertical } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import oceanPollution from '@/assets/hero-ocean-pollution.jpg';
+import oceanPollution from '@/assets/hero-ocean-plastic-bag.jpg';
 import landfillWaste from '@/assets/hero-landfill-real.jpg';
-import beachContamination from '@/assets/hero-beach-pollution.jpg';
-import wildlifeSuffering from '@/assets/hero-turtle-plastic.jpg';
-import waterContamination from '@/assets/hero-water-pollution.jpg';
+import beachContamination from '@/assets/hero-beach-bottles.jpg';
+import wildlifeSuffering from '@/assets/hero-turtle-entangled.jpg';
+import waterContamination from '@/assets/hero-microplastics.jpg';
 const slides = [{
   image: oceanPollution,
   icon: Waves,
   caption: "8 million tons of plastic enter our oceans every year",
   subtitle: "Marine life pays the ultimate price",
-  source: "OCG Saving The Ocean",
-  sourceUrl: "https://unsplash.com/photos/uAUruElioNk"
+  source: "Naja Bertolt Jensen",
+  sourceUrl: "https://unsplash.com/photos/eTNGOHCrWtg"
 }, {
   image: landfillWaste,
   icon: Mountain,
@@ -25,22 +25,22 @@ const slides = [{
   icon: TreePine,
   caption: "1 million plastic bottles are bought every minute",
   subtitle: "Pristine beaches become graveyards of plastic waste",
-  source: "Artem Beliaikin",
-  sourceUrl: "https://www.pexels.com/photo/selective-focus-photography-of-trash-on-sandy-surface-3850512/"
+  source: "Brian Yurasits",
+  sourceUrl: "https://unsplash.com/photos/5fbJMCzqNDs"
 }, {
   image: wildlifeSuffering,
   icon: Fish,
   caption: "100,000 marine animals die from plastic pollution annually",
   subtitle: "Wildlife mistakes plastic for food with fatal consequences",
-  source: "Stijn Dijkstra",
-  sourceUrl: "https://www.pexels.com/photo/turtle-swimming-underwater-3671083/"
+  source: "NOAA",
+  sourceUrl: "https://unsplash.com/photos/3TKMIxWJQhg"
 }, {
   image: waterContamination,
   icon: Droplets,
   caption: "Microplastics contaminate our drinking water",
   subtitle: "Plastic pollution affects every level of the food chain",
-  source: "Catherine Sheila",
-  sourceUrl: "https://www.pexels.com/photo/blue-and-yellow-water-1114690/"
+  source: "Sunyu Kim",
+  sourceUrl: "https://unsplash.com/photos/FfbVFLAVscw"
 }];
 export const HeroSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
