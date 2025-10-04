@@ -2,45 +2,45 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Waves, Mountain, TreePine, Fish, Droplets, MoreVertical } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import oceanPollution from '@/assets/hero-ocean-pollution.jpg';
-import landfillWaste from '@/assets/hero-landfill-waste.jpg';
-import beachContamination from '@/assets/hero-beach-plastic.jpg';
-import wildlifeSuffering from '@/assets/hero-wildlife-impact.jpg';
-import waterContamination from '@/assets/hero-water-contamination.jpg';
+import landfillWaste from '@/assets/hero-landfill-real.jpg';
+import beachContamination from '@/assets/hero-beach-pollution.jpg';
+import wildlifeSuffering from '@/assets/hero-turtle-plastic.jpg';
+import waterContamination from '@/assets/hero-water-pollution.jpg';
 const slides = [{
   image: oceanPollution,
   icon: Waves,
   caption: "8 million tons of plastic enter our oceans every year",
   subtitle: "Marine life pays the ultimate price",
-  source: "OCG Saving The Ocean on Unsplash",
+  source: "OCG Saving The Ocean",
   sourceUrl: "https://unsplash.com/photos/uAUruElioNk"
 }, {
   image: landfillWaste,
   icon: Mountain,
   caption: "Plastic waste takes 450+ years to decompose",
   subtitle: "Our landfills are overflowing with single-use plastics",
-  source: "Hanson Lu on Unsplash",
-  sourceUrl: "https://unsplash.com/photos/white-and-red-labeled-box-sz5lE6FBTqo"
+  source: "Tom Fisk",
+  sourceUrl: "https://www.pexels.com/photo/pile-of-garbage-3856436/"
 }, {
   image: beachContamination,
   icon: TreePine,
   caption: "1 million plastic bottles are bought every minute",
   subtitle: "Pristine beaches become graveyards of plastic waste",
-  source: "Ray Piedra on Unsplash",
-  sourceUrl: "https://unsplash.com/photos/clear-plastic-bottle-beside-beach-4xmgrNUbyNA"
+  source: "Artem Beliaikin",
+  sourceUrl: "https://www.pexels.com/photo/selective-focus-photography-of-trash-on-sandy-surface-3850512/"
 }, {
   image: wildlifeSuffering,
   icon: Fish,
   caption: "100,000 marine animals die from plastic pollution annually",
   subtitle: "Wildlife mistakes plastic for food with fatal consequences",
-  source: "OCG Saving The Ocean on Unsplash",
-  sourceUrl: "https://unsplash.com/photos/brown-and-white-turtle-swimming-underwater-0P-SgufF1do"
+  source: "Stijn Dijkstra",
+  sourceUrl: "https://www.pexels.com/photo/turtle-swimming-underwater-3671083/"
 }, {
   image: waterContamination,
   icon: Droplets,
   caption: "Microplastics contaminate our drinking water",
   subtitle: "Plastic pollution affects every level of the food chain",
-  source: "OCG Saving The Ocean on Unsplash",
-  sourceUrl: "https://unsplash.com/photos/brown-and-white-fish-in-water-lsMNd93nPbw"
+  source: "Catherine Sheila",
+  sourceUrl: "https://www.pexels.com/photo/blue-and-yellow-water-1114690/"
 }];
 export const HeroSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

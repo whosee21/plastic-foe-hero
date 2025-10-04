@@ -68,24 +68,27 @@ export const SourcesSection = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <h3 className="text-lg font-bold mb-4 text-foreground">Photo Credits</h3>
           <p className="text-xs text-muted-foreground mb-4">
-            All images on this site are from real photographers and are used under free licenses. We thank the following contributors:
+            All images on this site are authentic photographs from real photographers, used under free licenses. We thank the following contributors:
           </p>
-          <div className="space-y-2 text-xs text-muted-foreground">
+          <div className="space-y-3 text-xs text-muted-foreground">
             <div>
-              <span className="font-medium">Hero Images:</span> Naja Bertolt Jensen, Dustan Woodhouse, Brian Yurasits, Sergei Wing, Catherine Sheila (
-              <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Unsplash</a>)
+              <span className="font-medium">Hero Slideshow:</span>
+              <ul className="ml-4 mt-1 space-y-1">
+                <li>• <a href="https://unsplash.com/photos/uAUruElioNk" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">OCG Saving The Ocean</a> (Unsplash) - Ocean pollution</li>
+                <li>• <a href="https://www.pexels.com/photo/pile-of-garbage-3856436/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Tom Fisk</a> (Pexels) - Landfill waste</li>
+                <li>• <a href="https://www.pexels.com/photo/selective-focus-photography-of-trash-on-sandy-surface-3850512/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Artem Beliaikin</a> (Pexels) - Beach pollution</li>
+                <li>• <a href="https://www.pexels.com/photo/turtle-swimming-underwater-3671083/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Stijn Dijkstra</a> (Pexels) - Wildlife impact</li>
+                <li>• <a href="https://www.pexels.com/photo/blue-and-yellow-water-1114690/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Catherine Sheila</a> (Pexels) - Water contamination</li>
+              </ul>
             </div>
             <div>
-              <span className="font-medium">Statistics Section:</span> Naja Bertolt Jensen (
-              <a href="https://unsplash.com/photos/_qhzF4XxYFE" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Unsplash</a>)
+              <span className="font-medium">Statistics Section:</span> <a href="https://www.pexels.com/photo/body-of-water-802221/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Yogendra Singh</a> (Pexels)
             </div>
             <div>
-              <span className="font-medium">Educational Section:</span> Pawel Czerwinski (
-              <a href="https://unsplash.com/photos/FV3GConVSss" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Unsplash</a>)
+              <span className="font-medium">Educational Section:</span> <a href="https://www.pexels.com/photo/plastic-bottles-and-container-3612373/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Magda Ehlers</a> (Pexels)
             </div>
             <div>
-              <span className="font-medium">Solutions Section:</span> Bluewater Sweden (
-              <a href="https://unsplash.com/photos/XMFZqrGyV-Q" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Unsplash</a>)
+              <span className="font-medium">Solutions Section:</span> <a href="https://www.pexels.com/photo/reusable-bottles-on-wooden-surface-4386346/" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Anna Shvets</a> (Pexels)
             </div>
           </div>
         </div>
