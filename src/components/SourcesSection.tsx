@@ -102,7 +102,7 @@ export const SourcesSection = () => {
             </div>
             <div>
               <span className="font-medium">Statistics Section:</span>{' '}
-              <a href="https://unsplash.com/photos/_qhzF4XxYFE" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Naja Bertolt Jensen</a> (Unsplash)
+              <a href="https://unsplash.com/photos/school-of-fish-in-water-BJUoZu0mpt0" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Naja Bertolt Jensen</a> (Unsplash)
             </div>
             <div>
               <span className="font-medium">Educational Section:</span>{' '}
