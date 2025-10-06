@@ -71,7 +71,7 @@ export const StatisticsSection = () => {
               className="w-full h-full object-cover"
             />
             <a 
-              href="https://unsplash.com/photos/plastic-bottles-on-body-of-water-_qhzF4XxYFE" 
+              href="https://unsplash.com/photos/school-of-fish-in-water-BJUoZu0mpt0" 
               target="_blank" 
               rel="noopener noreferrer"
               className="absolute bottom-2 right-2 text-[11px] text-white/70 hover:text-white bg-black/40 hover:bg-black/60 px-2 py-1 rounded backdrop-blur-sm transition-all duration-200 italic"
