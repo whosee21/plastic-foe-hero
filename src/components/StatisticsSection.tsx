@@ -15,7 +15,7 @@ const statistics = [{
 }, {
   icon: TrendingUp,
   number: "163",
-  label: "Plastic bags used per Filipino annually",
+  label: <>Plasic <i>labo</i> bags used per Filipino annually</>,
   description: "Philippines ranks among the top plastic polluters globally",
   color: "text-secondary"
 }, {
