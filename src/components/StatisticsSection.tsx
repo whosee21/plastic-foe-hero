@@ -4,25 +4,25 @@ const statistics = [{
   icon: Globe,
   number: "300M",
   label: "Tons of plastic waste produced annually",
-  description: "Equivalent to the weight of the entire human population",
+  description: "Equivalent to the weight of the entire human population (United Nations Environment Programme, 2023)",
   color: "text-primary"
 }, {
   icon: Timer,
   number: "450+",
   label: "Years for plastic to decompose",
-  description: "A plastic bottle outlives 15 generations",
+  description: "A single plastic bottle outliving 15 generations (National Oceanic and Atmospheric Administration, 2024)",
   color: "text-urgent"
 }, {
   icon: TrendingUp,
   number: "163",
   label: <>Plasic <i>labo</i> bags used per Filipino annually</>,
-  description: "Philippines ranks among the top plastic polluters globally",
+  description: "Philippines ranks among the top plastic polluters globally (Global Alliance for Incinerator Alternatives, 2019)",
   color: "text-secondary"
 }, {
   icon: Skull,
   number: "1M+",
   label: "Marine animals killed by plastic yearly",
-  description: "Seabirds, sea turtles, and marine mammals suffer most",
+  description: "Seabirds, sea turtles, and marine mammals suffer most (United Nations Educational, Scientific and Cultural Organization, 2023)",
   color: "text-destructive"
 }];
 export const StatisticsSection = () => {

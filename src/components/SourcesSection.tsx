@@ -24,6 +24,26 @@ export const SourcesSection = () => {
       title: "United Nations Environment Programme (2018)",
       description: "Single-use plastics: A roadmap for sustainability.",
       url: "https://www.unep.org/resources/report/single-use-plastics-roadmap-sustainability"
+    },
+    {
+      title: "United Nations Environment Programme (2023)",
+      description: "World leaders set sights on plastic pollution.",
+      url: "https://www.unep.org/news-and-stories/story/world-leaders-set-sights-plastic-pollution"
+    },
+    {
+      title: "National Oceanic and Atmospheric Administration (2024)",
+      description: "How long until it's gone? Marine debris decomposition timeline.",
+      url: "https://marinedebris.noaa.gov/discover-issue/types-marine-debris/how-long-until-its-gone"
+    },
+    {
+      title: "Global Alliance for Incinerator Alternatives (2019)",
+      description: "Plastics exposed: How waste assessments & brand audits are helping Philippine cities fight plastic pollution.",
+      url: "https://www.no-burn.org/plastics-exposed-how-waste-assessments-and-brand-audits-are-helping-philippine-cities-fight-plastic-pollution"
+    },
+    {
+      title: "United Nations Educational, Scientific and Cultural Organization (2023)",
+      description: "Plastic pollution facts.",
+      url: "https://www.unesco.org/en/plastic-pollution/facts"
     }
   ];
 
