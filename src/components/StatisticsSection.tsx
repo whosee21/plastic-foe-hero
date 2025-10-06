@@ -1,5 +1,5 @@
 import { TrendingUp, Globe, Timer, Skull } from 'lucide-react';
-import oceanPlasticImg from '@/assets/ocean-waste-real.jpg';
+import oceanPlasticImg from '@/assets/ocean-plastic-pollution.jpg';
 const statistics = [{
   icon: Globe,
   number: "300M",
@@ -71,12 +71,12 @@ export const StatisticsSection = () => {
               className="w-full h-full object-cover"
             />
             <a 
-              href="https://www.pexels.com/photo/body-of-water-802221/" 
+              href="https://unsplash.com/photos/plastic-bottles-on-body-of-water-_qhzF4XxYFE" 
               target="_blank" 
               rel="noopener noreferrer"
               className="absolute bottom-2 right-2 text-[11px] text-white/70 hover:text-white bg-black/40 hover:bg-black/60 px-2 py-1 rounded backdrop-blur-sm transition-all duration-200 italic"
             >
-              Source: Pexels / Yogendra Singh
+              Source: Unsplash / Naja Bertolt Jensen
             </a>
           </div>
           

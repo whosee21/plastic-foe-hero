@@ -9,7 +9,7 @@ import {
   CheckCircle 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import reusableImg from '@/assets/reusable-alternatives-real.jpg';
+import reusableImg from '@/assets/reusable-products.jpg';
 
 const solutions = [
   {
@@ -169,12 +169,12 @@ export const SolutionsSection = () => {
               className="w-full h-full object-cover"
             />
             <a 
-              href="https://www.pexels.com/photo/reusable-bottles-on-wooden-surface-4386346/" 
+              href="https://unsplash.com/photos/assorted-color-plastic-bottles-XMFZqrGyV-Q" 
               target="_blank" 
               rel="noopener noreferrer"
               className="absolute bottom-2 right-2 text-[11px] text-white/70 hover:text-white bg-black/40 hover:bg-black/60 px-2 py-1 rounded backdrop-blur-sm transition-all duration-200 italic"
             >
-              Source: Pexels / Anna Shvets
+              Source: Unsplash / Bluewater Sweden
             </a>
           </div>
           
