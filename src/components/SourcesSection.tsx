@@ -96,7 +96,7 @@ export const SourcesSection = () => {
               <a href="https://unsplash.com/photos/blue-and-white-labeled-box-bjq3HjRmXJg" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Naja Bertolt Jensen</a>,{' '}
               <a href="https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-vDYt7CJFx9M" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Dustan Woodhouse</a>,{' '}
               <a href="https://unsplash.com/photos/plastic-bottle-on-seashore-LMncdhLDFUM" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Brian Yurasits</a>,{' '}
-              <a href="https://unsplash.com/photos/seagull-on-gray-sand-VJDCx_1ap0g" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Sergei Wing</a>,{' '}
+              <a href="https://www.science.org/content/article/why-do-seabirds-eat-plastic-they-think-it-smells-tasty" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Jens Metschurat/Alamy Stock Photo</a>,{' '}
               <a href="https://unsplash.com/photos/white-plastic-pack-on-white-textile-gkP1bqGC7qE" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:brightness-110">Catherine Sheila</a>{' '}
               (Unsplash)
             </div>

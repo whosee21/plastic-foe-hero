@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import oceanPollution from '@/assets/ocean-pollution.jpg';
 import landfillWaste from '@/assets/landfill-waste.jpg';
 import beachContamination from '@/assets/beach-contamination.jpg';
-import wildlifeSuffering from '@/assets/wildlife-suffering.jpg';
+import seabirdPlastic from '@/assets/seabird-plastic.jpg';
 import waterContamination from '@/assets/water-contamination.jpg';
 const slides = [{
   image: oceanPollution,
@@ -28,12 +28,12 @@ const slides = [{
   source: "Brian Yurasits on Unsplash",
   sourceUrl: "https://unsplash.com/photos/plastic-bottle-on-seashore-LMncdhLDFUM"
 }, {
-  image: wildlifeSuffering,
+  image: seabirdPlastic,
   icon: Fish,
   caption: "100,000 marine animals die from plastic pollution annually",
   subtitle: "Wildlife mistakes plastic for food with fatal consequences",
-  source: "Sergei Wing on Unsplash",
-  sourceUrl: "https://unsplash.com/photos/seagull-on-gray-sand-VJDCx_1ap0g"
+  source: "Jens Metschurat/Alamy Stock Photo",
+  sourceUrl: "https://www.science.org/content/article/why-do-seabirds-eat-plastic-they-think-it-smells-tasty"
 }, {
   image: waterContamination,
   icon: Droplets,
