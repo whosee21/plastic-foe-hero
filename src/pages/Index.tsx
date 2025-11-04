@@ -2,7 +2,6 @@ import { HeroSlideshow } from '@/components/HeroSlideshow';
 import { StatisticsSection } from '@/components/StatisticsSection';
 import { EducationalContent } from '@/components/EducationalContent';
 import { SolutionsSection } from '@/components/SolutionsSection';
-import { SolutionsInActionSection } from '@/components/SolutionsInActionSection';
 import { CallToAction } from '@/components/CallToAction';
 import { SourcesSection } from '@/components/SourcesSection';
 
@@ -43,7 +42,6 @@ const Index = () => {
       
       <StatisticsSection />
       <EducationalContent />
-      <SolutionsInActionSection />
       <SolutionsSection />
       <CallToAction />
       <SourcesSection />
